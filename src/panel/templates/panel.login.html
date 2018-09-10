@@ -1,0 +1,26 @@
+{% extends 'panel.app.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Login</div>
+
+                <div class="card-body">
+                    <form method="POST" action="">
+                        {% csrf_token %}
+
+                        {{ form|crispy }}
+
+                        <button type="submit" class="btn btn-success">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
