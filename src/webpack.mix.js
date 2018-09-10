@@ -11,5 +11,5 @@ let mix = require('laravel-mix');
  |
  */
 // mix.disableSuccessNotifications();
-mix.js('staticfiles/js/uncompiled/app.js', 'panel/static/js/app.js')
-    .sass('staticfiles/css/uncompiled/app.scss', 'panel/static/css/app.css')
+mix.js('resources/js/app.js', 'public/js/app.js')
+    .sass('resources/css/app.scss', 'public/css/app.css')
