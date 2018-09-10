@@ -11,4 +11,3 @@ install:
 script:
 - python manage.py collectstatic --noinput
 - npm run dev
-- python manage.py test
