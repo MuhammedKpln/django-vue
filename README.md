@@ -15,3 +15,7 @@ Another Django + Vue boilerplate but in Laravel way! Well you no longer need cre
 `$ python manage.py migrate`\
 `$ python manage.py runserver`\
 `
+
+# Features will be added soon
+- Email confirmation
+- Password reset 
