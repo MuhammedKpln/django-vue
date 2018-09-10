@@ -10,25 +10,27 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
-import os
+import os, environ
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+env = environ.Env()
+env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5j-(6pv!bj4%m&f14^0jc_@w^l$=08yi%kze6v86awo^24%j^r'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG', default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env('ALLOWED_HOSTS')
 
-
-# Application definition
+ # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -52,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'root.urls'
+ROOT_URLCONF = env('ROOT_URLCONF', default='root.urls')
 
 TEMPLATES = [
     {
@@ -70,8 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'root.wsgi.application'
-
+WSGI_APPLICATION = env('WSGI_APPLICATION', default='root.wsgi.application')
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -122,10 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join('staticfiles')
-# STATICFILES_DIRS = [
-#     os.path.join('panel', 'static')
-# ]
 
 
 # Crispy forms
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = env('TEMPLATE_PACK', default="bootstrap4")

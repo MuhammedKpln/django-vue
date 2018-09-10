@@ -8,6 +8,7 @@ name = "pypi"
 Django = "==2.1"
 Pillow = "*"
 django-crispy-forms = "*"
+django-environ = "*"
 
 [dev-packages]
 

@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.com/MuhammedKpln/django-vue.svg?branch=master)](https://travis-ci.com/MuhammedKpln/django-vue)
 
 # Django + Vue boilerplate
-Another Django + Vue boilerplate but in Laravel way! Well you no longer need create two seperate folder for backend and frontend. Eveything is already up and running!
+**This is not SPA. It is only for single page applications.**\
+Another Django + Vue boilerplate but in Laravel way! Did you want use Vue in your site on specific places? Eveything is built-in so you don't need to grab any vue script file from cdn provider. Isn't that good!?
 
 # Demo
 [https://django-vue-boilerplate.herokuapp.com/](https://django-vue-boilerplate.herokuapp.com/)
