@@ -164,3 +164,4 @@ ENV
 
 #custom
 src/staticfiles/
+src/public/
