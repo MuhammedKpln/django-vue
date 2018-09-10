@@ -7,7 +7,7 @@ Another Django + Vue boilerplate but in Laravel way! Well you no longer need cre
 [https://django-vue-boilerplate.herokuapp.com/](https://django-vue-boilerplate.herokuapp.com/)
 
 # Quick start
-`$ git clone https://github.com/MuhammedKpln/django-vue.git && cd django-vue`
+`$ git clone https://github.com/MuhammedKpln/django-vue.git && cd django-vue`\
 `$ pip install -r requirements.txt`\
 `$ cd src`\
 `$ npm install`\
