@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+"psycopg2-binary" = "*"
+Django = "==2.1"
+Pillow = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
