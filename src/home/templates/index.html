@@ -70,7 +70,7 @@
     <div class="flex-center position-ref full-height">
         <div class="top-right links">
             {% if user.is_authenticated %}
-            <a href="">Home</a>
+            <a href="{% url 'Dashboard' %}">Home</a>
             {% else %}
             <a href="{% url 'Login' %}">Login</a>
             <a href="{% url 'Register' %}">Register</a>
