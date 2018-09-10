@@ -8,9 +8,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
 
-class IndexView(LoginRequiredMixin, TemplateView):
+class IndexView(TemplateView):
     def get(self, request):
         return render(request, 'panel.index.html')
+
+
+class Dashboard(LoginRequiredMixin, TemplateView):
+    def get(self, request):
+        return render(request, 'panel.dashboard.html')
 
 
 class LoginView(FormView):
