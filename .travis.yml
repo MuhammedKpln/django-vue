@@ -1,0 +1,12 @@
+language: python
+python:
+  - 3.6
+node_js:
+  - "10.9.0"
+install:
+  - pip install -r requirements.txt
+  - cd src && npm install
+
+script:
+- python manage.py collectstatic --noinput
+- python manage.py test
