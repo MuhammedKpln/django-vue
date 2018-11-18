@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 "psycopg2-binary" = "*"
-Django = "==2.1"
+Django = "==2.1.2"
 Pillow = "*"
 django-crispy-forms = "*"
 django-environ = "*"
